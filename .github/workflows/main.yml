@@ -1,14 +1,11 @@
 on:
   push:
-   /*what is the branch*/
     branches:
       - master
       
       jobs:
   build:
-    /*what is the machine type*/
     runs-on: ubuntu-latest 
-    /*array*/
     steps:
       - name: "testing github actions"
         run: pwd
