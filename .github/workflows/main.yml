@@ -10,8 +10,8 @@ jobs:
       - name: " login to dockerhub"
         run: docker login --username ${{secrets.ABDO_SECRET}} --password ${{secrets.PASS_SECRET}}
       - name: " building docker "
-        run: docker build -t javat .
+        run: docker build -t java1 .
       - name: "create image tag "
-        run: docker tag ${{secrets.DOCKER_USERNAME}}/javat:dev
+        run: docker tag ${{secrets.DOCKER_USERNAME}}/java1:dev
       - name: " pushing to docker hub "
-        run: docker push ${{secrets.DOCKER_USERNAME}}/javat:dev
+        run: docker push ${{secrets.DOCKER_USERNAME}}/java1:dev
