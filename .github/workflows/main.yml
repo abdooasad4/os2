@@ -8,4 +8,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: " login to dockerhub"
-        run: docker login --username ${{secrets.ABDO_SECRET}} --password ${{secrets.PASS_SECRET}}
+        run: docker login --username ${{ secrets.ABDO_SECRET }} --password ${{ secrets.PASS_SECRET }}
