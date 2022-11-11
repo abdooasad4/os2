@@ -9,8 +9,8 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: " login to dockerhub"
-        run: docker login --username ${{secrets.ABDO_SECRET}} --password ${{secrets.PASS_SECRET}}
+        run: docker login --username ${{ secrets.ABDO_SECRET }} --password ${{ secrets.PASS_SECRET }}
       - name: " building docker "
-        run: docker build -t ${{secrets.ABDO_SECRET}}/javat:dev .
+        run: docker build -t ${{ secrets.ABDO_SECRET }}/javat:dev .
       - name: " pushing to docker hub "
-        run: docker push ${{secrets.ABDO_SECRET}}/javat:dev
+        run: docker push ${{ secrets.ABDO_SECRET }}/javat:dev
