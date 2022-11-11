@@ -11,6 +11,6 @@ jobs:
       - name: " login to dockerhub"
         run: docker login --username ${{secrets.ABDO_SECRET}} --password ${{secrets.PASS_SECRET}}
       - name: " building docker "
-        run: docker tag ${{secrets.DOCKER_USERNAME}}/javat:dev .
+        run: docker build -t ${{secrets.DOCKER_USERNAME}}/javat .
       - name: " pushing to docker hub "
-        run: docker push ${{secrets.DOCKER_USERNAME}}/javat:dev
+        run: docker push ${{secrets.DOCKER_USERNAME}}/javat
